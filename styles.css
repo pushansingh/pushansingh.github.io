@@ -1,7 +1,7 @@
 /* Base Styles */
 body {
     font-family: 'Courier New', Courier, monospace;
-    background: linear-gradient(135deg, #070D0D, #1c1c1c);
+    background-color: #070D0D;
     color: #EDC8FE;
     margin: 0;
     padding: 0;
@@ -10,6 +10,15 @@ body {
     align-items: center;
     text-align: center;
     overflow-x: hidden;
+    position: relative;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #000000;
 }
 
 nav {
@@ -17,6 +26,7 @@ nav {
     background-color: #1c1c1c;
     padding: 10px 0;
     box-shadow: 0 0 15px #B30049;
+    animation: fadeInDown 1s;
 }
 
 nav ul {
@@ -44,17 +54,14 @@ nav ul li a:hover {
 
 header {
     width: 100%;
-    background: linear-gradient(135deg, #070D0D 25%, #1c1c1c 25%, #1c1c1c 50%, #070D0D 50%, #070D0D 75%, #1c1c1c 75%, #1c1c1c 100%);
-    background-size: 56.57px 56.57px;
     color: #EDC8FE;
     padding: 20px 0;
     box-shadow: 0 0 15px #B30049;
-    animation: scanlines 0.1s infinite;
+    animation: fadeInDown 1s;
 }
 
 .header-content {
     animation: fadeIn 2s ease-in-out;
-    position: relative;
 }
 
 header h1 {
@@ -155,12 +162,14 @@ footer a:hover img {
     }
 }
 
-@keyframes scanlines {
-    0% {
-        background-position: 0 0;
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
     }
-    100% {
-        background-position: 0 56.57px;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -216,42 +225,26 @@ footer a:hover img {
     }
     65% {
         clip: rect(90px, 9999px, 98px, 0);
+    }
     70% {
         clip: rect(15px, 9999px, 22px, 0);
+    }
     75% {
         clip: rect(42px, 9999px, 54px, 0);
+    }
     80% {
         clip: rect(64px, 9999px, 72px, 0);
+    }
     85% {
         clip: rect(15px, 9999px, 22px, 0);
+    }
     90% {
         clip: rect(22px, 9999px, 28px, 0);
+    }
     95% {
         clip: rect(84px, 9999px, 92px, 0);
+    }
     100% {
         clip: rect(49px, 9999px, 54px, 0);
     }
 }
-
-header .neon {
-    color: #39ff14;
-    text-shadow:
-      0 0 5px #39ff14,
-      0 0 10px #39ff14,
-      0 0 20px #39ff14,
-      0 0 40px #39ff14;
-}
-
-header .glow {
-    color: #edc8fe;
-    text-shadow:
-      0 0 5px #edc8fe,
-      0 0 10px #edc8fe,
-      0 0 20px #edc8fe,
-      0 0 40px #edc8fe;
-}
-
-.header-content {
-    animation: fadeIn 2s ease-in-out;
-}
-

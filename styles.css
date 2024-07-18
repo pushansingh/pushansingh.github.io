@@ -49,6 +49,7 @@ header {
     color: #EDC8FE;
     padding: 20px 0;
     box-shadow: 0 0 15px #B30049;
+    animation: scanlines 0.1s infinite;
 }
 
 .header-content {
@@ -72,10 +73,10 @@ header h2 {
     overflow: hidden;
     border-right: 4px solid #EDC8FE;
     width: 0;
-    animation: typing 4s steps(22, end);
+    animation: typing 4s steps(22, end), blink-caret 0.75s step-end infinite;
 }
 
-.section-content {
+section {
     padding: 20px;
     margin: 20px 10px;
     max-width: 800px;
@@ -86,7 +87,7 @@ header h2 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.section-content:hover {
+section:hover {
     transform: scale(1.05);
     box-shadow: 0 0 30px rgba(179, 0, 73, 0.7);
 }
@@ -153,9 +154,23 @@ footer a:hover img {
     }
 }
 
+@keyframes scanlines {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 56.57px;
+    }
+}
+
 @keyframes typing {
     from { width: 0; }
     to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #EDC8FE; }
 }
 
 @keyframes glitch {

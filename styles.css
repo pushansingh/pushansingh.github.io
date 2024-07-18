@@ -1,8 +1,8 @@
 /* Base Styles */
 body {
     font-family: 'Courier New', Courier, monospace;
-    background-color: #1a1a1a;
-    color: #39ff14;
+    background-color: #070D0D;
+    color: #EDC8FE;
     margin: 0;
     padding: 0;
     display: flex;
@@ -16,7 +16,7 @@ nav {
     width: 100%;
     background-color: #1c1c1c;
     padding: 10px 0;
-    box-shadow: 0 0 15px #39ff14;
+    box-shadow: 0 0 15px #B30049;
 }
 
 nav ul {
@@ -25,7 +25,6 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    animation: blink 1.5s step-end infinite;
 }
 
 nav ul li {
@@ -33,23 +32,23 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #39ff14;
+    color: #EDC8FE;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #00ff00;
+    color: #B30049;
 }
 
 header {
     width: 100%;
-    background: linear-gradient(135deg, #101010 25%, #1a1a1a 25%, #1a1a1a 50%, #101010 50%, #101010 75%, #1a1a1a 75%, #1a1a1a 100%);
+    background: linear-gradient(135deg, #070D0D 25%, #1c1c1c 25%, #1c1c1c 50%, #070D0D 50%, #070D0D 75%, #1c1c1c 75%, #1c1c1c 100%);
     background-size: 56.57px 56.57px;
-    color: #39ff14;
+    color: #EDC8FE;
     padding: 20px 0;
-    box-shadow: 0 0 15px #39ff14;
+    box-shadow: 0 0 15px #B30049;
     animation: scanlines 0.1s infinite;
 }
 
@@ -69,10 +68,10 @@ header h2 {
     margin: 0;
     font-size: 1.5em;
     font-weight: normal;
-    color: #39ff14;
+    color: #EDC8FE;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 4px solid #39ff14;
+    border-right: 4px solid #EDC8FE;
     width: 0;
     animation: typing 4s steps(22, end), blink-caret 0.75s step-end infinite;
 }
@@ -83,31 +82,30 @@ section {
     max-width: 800px;
     background-color: #121212;
     border-radius: 8px;
-    box-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+    box-shadow: 0 0 20px rgba(179, 0, 73, 0.5);
     animation: fadeIn 2s ease-in-out;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 section:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(57, 255, 20, 0.7);
+    box-shadow: 0 0 30px rgba(179, 0, 73, 0.7);
 }
 
 section h3 {
     font-size: 1.8em;
     margin-top: 0;
-    color: #39ff14;
-    border-bottom: 2px solid #39ff14;
+    color: #B30049;
+    border-bottom: 2px solid #B30049;
     padding-bottom: 10px;
-    animation: blink 1.5s step-end infinite;
 }
 
 blockquote {
     font-style: italic;
-    color: #00ff00;
+    color: #B30049;
     margin: 0;
     padding: 10px;
-    border-left: 4px solid #39ff14;
+    border-left: 4px solid #B30049;
     background-color: #1c1c1c;
     animation: fadeIn 3s ease-in-out;
 }
@@ -116,10 +114,8 @@ footer {
     text-align: center;
     padding: 10px;
     background-color: #121212;
-    color: #39ff14;
+    color: #EDC8FE;
     width: 100%;
-    position: fixed;
-    bottom: 0;
     animation: fadeIn 2s ease-in-out;
     display: flex;
     justify-content: center;
@@ -127,7 +123,7 @@ footer {
 }
 
 footer a {
-    color: #39ff14;
+    color: #EDC8FE;
     text-decoration: none;
     font-weight: bold;
     margin-left: 5px;
@@ -142,7 +138,7 @@ footer a img {
 }
 
 footer a:hover {
-    color: #00ff00;
+    color: #B30049;
 }
 
 footer a:hover img {
@@ -174,13 +170,7 @@ footer a:hover img {
 
 @keyframes blink-caret {
     from, to { border-color: transparent; }
-    50% { border-color: #39ff14; }
-}
-
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
+    50% { border-color: #EDC8FE; }
 }
 
 @keyframes glitch {

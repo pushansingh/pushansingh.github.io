@@ -1,20 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('section');
-    const options = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, options);
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("Page fully loaded and ready!");
     
-    sections.forEach(section => {
-        observer.observe(section);
-    });
+    // Easter egg message for those inspecting the console
+    console.log("%cHey there, inspector! 👀", "color: #EDC8FE; font-size: 16px;");
+    console.log("%cYou found the Easter egg! 🎉", "color: #B30049; font-size: 14px;");
+    console.log("%cKeep it hush-hush and carry on hacking! 😎", "color: #39FF14; font-size: 12px;");
+    
+    // Additional script functionalities can be added here
 });

@@ -1,59 +1,82 @@
+/* Base Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #000000;
+    color: #FFFFFF;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
 }
 
 header {
-    background-color: #007acc;
-    color: white;
+    background-color: #1f1f1f;
+    color: #00e5ff;
     padding: 20px 0;
-    text-align: center;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 3em;
+    letter-spacing: 2px;
+    animation: glow 1.5s infinite alternate;
 }
 
 header h2 {
     margin: 0;
     font-size: 1.5em;
     font-weight: normal;
+    color: #00e5ff;
 }
 
 section {
     padding: 20px;
-    margin: 20px auto;
+    margin: 20px 0;
     max-width: 800px;
-    background-color: white;
+    background-color: #1f1f1f;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
 }
 
 section h3 {
     font-size: 1.8em;
     margin-top: 0;
+    color: #00e5ff;
+    border-bottom: 2px solid #00e5ff;
+    padding-bottom: 10px;
 }
 
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #007acc;
-    color: white;
-    position: fixed;
+    background-color: #1f1f1f;
+    color: #00e5ff;
     width: 100%;
+    position: fixed;
     bottom: 0;
 }
 
 footer a {
-    color: white;
+    color: #00e5ff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: #00b0ff;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff, 0 0 15px #00e5ff, 0 0 20px #00e5ff;
+    }
+    to {
+        text-shadow: 0 0 20px #00e5ff, 0 0 30px #00e5ff, 0 0 40px #00e5ff, 0 0 50px #00e5ff;
+    }
 }

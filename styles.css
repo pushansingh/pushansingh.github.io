@@ -1,8 +1,8 @@
 /* Base Styles */
 body {
     font-family: 'Courier New', Courier, monospace;
-    background-color: #000;
-    color: #00ff00;
+    background-color: #1a1a1a;
+    color: #39ff14;
     margin: 0;
     padding: 0;
     display: flex;
@@ -16,7 +16,7 @@ nav {
     width: 100%;
     background-color: #1c1c1c;
     padding: 10px 0;
-    box-shadow: 0 0 15px #00ff00;
+    box-shadow: 0 0 15px #39ff14;
 }
 
 nav ul {
@@ -33,23 +33,23 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #00ff00;
+    color: #39ff14;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #00cc00;
+    color: #00ff00;
 }
 
 header {
     width: 100%;
-    background: linear-gradient(135deg, #0f0f0f 25%, #1c1c1c 25%, #1c1c1c 50%, #0f0f0f 50%, #0f0f0f 75%, #1c1c1c 75%, #1c1c1c 100%);
+    background: linear-gradient(135deg, #101010 25%, #1a1a1a 25%, #1a1a1a 50%, #101010 50%, #101010 75%, #1a1a1a 75%, #1a1a1a 100%);
     background-size: 56.57px 56.57px;
-    color: #00ff00;
+    color: #39ff14;
     padding: 20px 0;
-    box-shadow: 0 0 15px #00ff00;
+    box-shadow: 0 0 15px #39ff14;
     animation: scanlines 0.1s infinite;
 }
 
@@ -61,16 +61,18 @@ header h1 {
     margin: 0;
     font-size: 3em;
     letter-spacing: 2px;
+    position: relative;
+    animation: glitch 1s linear infinite;
 }
 
 header h2 {
     margin: 0;
     font-size: 1.5em;
     font-weight: normal;
-    color: #00ff00;
+    color: #39ff14;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 4px solid #00ff00;
+    border-right: 4px solid #39ff14;
     width: 0;
     animation: typing 4s steps(22, end), blink-caret 0.75s step-end infinite;
 }
@@ -79,33 +81,33 @@ section {
     padding: 20px;
     margin: 20px 10px;
     max-width: 800px;
-    background-color: #0f0f0f;
+    background-color: #121212;
     border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
     animation: fadeIn 2s ease-in-out;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 section:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(0, 255, 0, 0.7);
+    box-shadow: 0 0 30px rgba(57, 255, 20, 0.7);
 }
 
 section h3 {
     font-size: 1.8em;
     margin-top: 0;
-    color: #00ff00;
-    border-bottom: 2px solid #00ff00;
+    color: #39ff14;
+    border-bottom: 2px solid #39ff14;
     padding-bottom: 10px;
     animation: blink 1.5s step-end infinite;
 }
 
 blockquote {
     font-style: italic;
-    color: #00cc00;
+    color: #00ff00;
     margin: 0;
     padding: 10px;
-    border-left: 4px solid #00ff00;
+    border-left: 4px solid #39ff14;
     background-color: #1c1c1c;
     animation: fadeIn 3s ease-in-out;
 }
@@ -113,23 +115,38 @@ blockquote {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #0f0f0f;
-    color: #00ff00;
+    background-color: #121212;
+    color: #39ff14;
     width: 100%;
     position: fixed;
     bottom: 0;
     animation: fadeIn 2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer a {
-    color: #00ff00;
+    color: #39ff14;
     text-decoration: none;
     font-weight: bold;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
     transition: color 0.3s ease;
 }
 
+footer a img {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
 footer a:hover {
-    color: #00cc00;
+    color: #00ff00;
+}
+
+footer a:hover img {
+    transform: scale(1.2);
 }
 
 @keyframes fadeIn {
@@ -157,7 +174,7 @@ footer a:hover {
 
 @keyframes blink-caret {
     from, to { border-color: transparent; }
-    50% { border-color: #00ff00; }
+    50% { border-color: #39ff14; }
 }
 
 @keyframes blink {
@@ -210,4 +227,24 @@ footer a:hover {
         clip: rect(90px, 9999px, 98px, 0);
     }
     70% {
-        clip: rect(15px, 9999px
+        clip: rect(15px, 9999px, 22px, 0);
+    }
+    75% {
+        clip: rect(42px, 9999px, 54px, 0);
+    }
+    80% {
+        clip: rect(64px, 9999px, 72px, 0);
+    }
+    85% {
+        clip: rect(15px, 9999px, 22px, 0);
+    }
+    90% {
+        clip: rect(22px, 9999px, 28px, 0);
+    }
+    95% {
+        clip: rect(84px, 9999px, 92px, 0);
+    }
+    100% {
+        clip: rect(49px, 9999px, 54px, 0);
+    }
+}

@@ -12,6 +12,36 @@ body {
     overflow-x: hidden;
 }
 
+nav {
+    width: 100%;
+    background-color: #1c1c1c;
+    padding: 10px 0;
+    box-shadow: 0 0 15px #00ff00;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #00ff00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00cc00;
+}
+
 header {
     width: 100%;
     background: linear-gradient(135deg, #0f0f0f 25%, #1c1c1c 25%, #1c1c1c 50%, #0f0f0f 50%, #0f0f0f 75%, #1c1c1c 75%, #1c1c1c 100%);
@@ -37,6 +67,11 @@ header h2 {
     font-size: 1.5em;
     font-weight: normal;
     color: #00ff00;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #00ff00;
+    width: 0;
+    animation: typing 4s steps(22, end), blink-caret 0.75s step-end infinite;
 }
 
 section {
@@ -47,6 +82,12 @@ section {
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
     animation: fadeIn 2s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.7);
 }
 
 section h3 {
@@ -95,6 +136,16 @@ footer a:hover {
     100% {
         background-position: 0 56.57px;
     }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #00ff00; }
 }
 
 /* Mobile Styles */

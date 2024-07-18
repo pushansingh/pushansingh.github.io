@@ -1,7 +1,7 @@
 /* Base Styles */
 body {
     font-family: 'Courier New', Courier, monospace;
-    background-color: #070D0D;
+    background: linear-gradient(135deg, #070D0D, #1c1c1c);
     color: #EDC8FE;
     margin: 0;
     padding: 0;
@@ -54,6 +54,7 @@ header {
 
 .header-content {
     animation: fadeIn 2s ease-in-out;
+    position: relative;
 }
 
 header h1 {
@@ -215,26 +216,42 @@ footer a:hover img {
     }
     65% {
         clip: rect(90px, 9999px, 98px, 0);
-    }
     70% {
         clip: rect(15px, 9999px, 22px, 0);
-    }
     75% {
         clip: rect(42px, 9999px, 54px, 0);
-    }
     80% {
         clip: rect(64px, 9999px, 72px, 0);
-    }
     85% {
         clip: rect(15px, 9999px, 22px, 0);
-    }
     90% {
         clip: rect(22px, 9999px, 28px, 0);
-    }
     95% {
         clip: rect(84px, 9999px, 92px, 0);
-    }
     100% {
         clip: rect(49px, 9999px, 54px, 0);
     }
 }
+
+header .neon {
+    color: #39ff14;
+    text-shadow:
+      0 0 5px #39ff14,
+      0 0 10px #39ff14,
+      0 0 20px #39ff14,
+      0 0 40px #39ff14;
+}
+
+header .glow {
+    color: #edc8fe;
+    text-shadow:
+      0 0 5px #edc8fe,
+      0 0 10px #edc8fe,
+      0 0 20px #edc8fe,
+      0 0 40px #edc8fe;
+}
+
+.header-content {
+    animation: fadeIn 2s ease-in-out;
+}
+
